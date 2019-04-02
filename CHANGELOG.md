@@ -1,6 +1,42 @@
 Change Log
 ==========
 
+[1.6.0 - 06-11-2018](https://github.com/bbaugher/apache_zookeeper/issues?milestone=21&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Enhancement] [Issue-54](https://github.com/bbaugher/apache_zookeeper/issues/54) : Fix init.d/systemd to read configuration from `config_dir`
+
+[1.5.0 - 06-08-2018](https://github.com/bbaugher/apache_zookeeper/issues?milestone=20&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Enhancement] [Issue-56](https://github.com/bbaugher/apache_zookeeper/issues/56) : Fix LSB init block to allow use of init script with systemd
+
+[1.4.0 - 01-02-2018](https://github.com/bbaugher/apache_zookeeper/issues?milestone=19&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Enhancement] [Issue-52](https://github.com/bbaugher/apache_zookeeper/issues/52) : Fix for CentOS 7 while executing "apache_zookeeper::service_systemd" recipe.
+
+[1.3.0 - 08-25-2017](https://github.com/bbaugher/apache_zookeeper/issues?milestone=18&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Enhancement] [Issue-50](https://github.com/bbaugher/apache_zookeeper/issues/50) : Correct README about log_dir and fix systemd
+
+[1.2.0 - 08-04-2017](https://github.com/bbaugher/apache_zookeeper/issues?milestone=17&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Feature] [Issue-48](https://github.com/bbaugher/apache_zookeeper/issues/48) : Package installation support
+
+[1.1.1 - 05-24-2017](https://github.com/bbaugher/apache_zookeeper/issues?milestone=16&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Bug] [Issue-47](https://github.com/bbaugher/apache_zookeeper/issues/47) : binary_url doesn't adhere to version or mirror
+
+[1.1.0 - 05-24-2017](https://github.com/bbaugher/apache_zookeeper/issues?milestone=15&state=closed)
+---------------------------------------------------------------------------------------------------
+
+  * [Enhancement] [Issue-45](https://github.com/bbaugher/apache_zookeeper/issues/45) : Running service status with the correct user
+  * [Bug] [Issue-40](https://github.com/bbaugher/apache_zookeeper/issues/40) : init.d scripts have the CONFIG path hardcoded.
+
 [1.0.1 - 09-23-2016](https://github.com/bbaugher/apache_zookeeper/issues?milestone=14&state=closed)
 ---------------------------------------------------------------------------------------------------
 

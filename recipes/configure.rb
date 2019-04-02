@@ -1,12 +1,7 @@
-# encoding: UTF-8
 # Cookbook Name:: apache_zookeeper
-# Re
 # Recipe:: configure
 
 # Create all the directories
-#class ::Chef::Recipe
-#  include ::ZookeeperHelper
-#end
 class ::Chef::Recipe
   include ::ZookeeperHelper
 end
@@ -14,16 +9,32 @@ class ::Chef::Resource
   include ::ZookeeperHelper
 end
 
-[
-  node['apache_zookeeper']['config_dir'],
-  node['apache_zookeeper']['bin_dir'],
-  node['apache_zookeeper']['data_dir'],
-  node['apache_zookeeper']['log_dir'],
-].each do |dir|
-  directory dir do
-    recursive true
-    owner node['apache_zookeeper']['user']
-    group node['apache_zookeeper']['group']
+include_recipe 'apache_zookeeper::_attributes'
+
+case node['apache_zookeeper']['install']['type']
+when 'source'
+  [
+    node['apache_zookeeper']['config_dir'],
+    node['apache_zookeeper']['bin_dir'],
+    node['apache_zookeeper']['data_dir'],
+    node['apache_zookeeper']['log_dir'],
+  ].each do |dir|
+    directory dir do
+      recursive true
+      owner node['apache_zookeeper']['user']
+      group node['apache_zookeeper']['group']
+    end
+  end
+when 'package'
+  [
+    node['apache_zookeeper']['data_dir'],
+    node['apache_zookeeper']['log_dir'],
+  ].each do |dir|
+    directory dir do
+      recursive true
+      owner node['apache_zookeeper']['user']
+      group node['apache_zookeeper']['group']
+    end
   end
 end
 
